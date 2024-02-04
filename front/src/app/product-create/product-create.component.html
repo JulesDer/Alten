@@ -1,0 +1,48 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="p-fluid">
+  <div class="p-field">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" pInputText required>
+  </div>
+
+  <div class="p-field">
+    <label for="code">Code</label>
+    <input type="text" id="code" formControlName="code" pInputText required>
+  </div>
+
+  <div class="p-field">
+    <label for="description">Description</label>
+    <textarea id="description" formControlName="description" pInputTextarea></textarea>
+  </div>
+
+  <div class="p-field">
+    <label for="image">Image URL</label>
+    <input type="text" id="image" formControlName="image" pInputText>
+  </div>
+
+  <div class="p-field">
+    <label for="price">Price</label>
+    <input type="number" id="price" formControlName="price" pInputNumber mode="currency" currency="USD">
+  </div>
+
+  <div class="p-field">
+    <label for="category">Category</label>
+    <input type="text" id="category" formControlName="category" pInputText>
+  </div>
+
+  <div class="p-field">
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" formControlName="quantity" pInputNumber>
+  </div>
+
+  <div class="p-field">
+    <label for="inventoryStatus">Inventory Status</label>
+    <input type="text" id="inventoryStatus" formControlName="inventoryStatus" pInputText>
+  </div>
+
+  <div class="p-field">
+    <label for="rating">Rating</label>
+    <input type="number" id="rating" formControlName="rating" pInputNumber [max]="5" [min]="0">
+  </div>
+
+  <button type="submit" pButton label="Create Product"></button>
+</form>

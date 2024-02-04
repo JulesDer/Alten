@@ -1,0 +1,16 @@
+.app-header {
+    height: 50px;
+    margin-left: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.body {
+  flex: 1;
+  overflow: auto;
+  margin-top: 70px;
+  margin-left: 300px;
+}
+
+
